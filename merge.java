@@ -29,4 +29,18 @@
 		// TODO Auto-generated method stub
 		return i<j;
 	}
+        public static void main(String[] args) {
+    	int[] a={1,9,5,4,3,5,32,4,3,2,5,2,0}
+    	System.out.print(a);
+    	sort(a);
+    	
+    	show(a);
+    }
+	private static void show(int[] a) {
+		// TODO Auto-generated method stub
+		for(int i=0;i<a.length;i++)
+    		System.out.print(a[i]+ " ");
+    	System.out.println();
+	}
+
 }
