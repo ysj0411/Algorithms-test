@@ -30,7 +30,7 @@
 		return i<j;
 	}
         public static void main(String[] args) {
-    	int[] a={1,9,5,4,3,5,32,4,3,2,5,2,0}
+    	int[] a={1,9,5,4,3,5,32,4,3,2,5,2,0};
     	System.out.print(a);
     	sort(a);
     	
