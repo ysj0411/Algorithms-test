@@ -22,6 +22,7 @@
     	int mid=lo+(hi-lo)/2;
     	sort(a,lo,mid);
     	sort(a,mid+1,hi);
+        if(a[mid]>a[mid+1])//如果a[mid]<a[mid+1]，则判定数组有序，跳过merge。
     	merge(a,lo,mid, hi);
     }
     
