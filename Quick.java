@@ -25,7 +25,7 @@ public class Quick {
 	    	
 	    	show(a);
 	    }
-		private static void sort(int[] a) {
+		public static void sort(int[] a) {
 		// TODO Auto-generated method stub
 			
 		sort(a,0,a.length-1);
