@@ -12,7 +12,8 @@ public class Quick {
 			exch(a,i,j);//a[i]与a[j]交换，上方一直循环，直到遇到a[++1]>v并且a[--j]<v时，交换当前满足的a[i]和a[j]，也就是把左边的放到右边，右边，右边放到左边，以满足切分的左右元素分配。
 		}
 		exch(a,lo,j);//因为要把切分元素放到中间就要放置在左边的末尾，因为++i和--j的特点。可以直到j正好遍历到左边的末尾，而i则遍历到右边的开头。
-    	return j ;
+    	        assert isSorted(a,lo,hi);
+               return j ;
  }
 	private static boolean less(int i, int j) {
 		// TODO Auto-generated method stub
@@ -45,5 +46,12 @@ public class Quick {
 		 private static void exch(int[] a,int i,int j) {
 		    	int t=a[i];a[i]=a[j];a[j]=t;
 }
-		 
+	 private static boolean isSorted(int[] a, int lo, int hi) {
+		        for (int i = lo + 1; i <= hi; i++)
+		            if (less(a[i], a[i-1])) return false;
+		        return true;
+		    }
+		    private static boolean isSorted(int[] a) {
+		        return isSorted(a, 0, a.length - 1);
+		    }	 
 }
